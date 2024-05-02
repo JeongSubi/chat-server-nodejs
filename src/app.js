@@ -1,6 +1,6 @@
 const http = require("http");
 const WebSocket = require("ws");
-const { SocketLogger} = require("./logs/winston");
+const { SocketLogger} = require("../libs/logs/winston");
 const { NewRoom } = require("./types/Room");
 // const express = require("express");
 // const cors = require("cors");

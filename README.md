@@ -2,7 +2,7 @@
 : chat-server-nodejs-with-websocket
 
 ## tech stack
-: Express, Javascript, ws, winston(logging)
+: Javascript, ws, winston(logging)
 
 ## sample API
 ```

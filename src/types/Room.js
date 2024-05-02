@@ -1,4 +1,4 @@
-const { SocketLogger} = require("../logs/winston");
+const { SocketLogger} = require("../../libs/logs/winston");
 
 class Room {
     constructor() {
