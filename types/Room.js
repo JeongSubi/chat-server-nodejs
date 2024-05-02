@@ -3,7 +3,7 @@ const { SocketLogger} = require("../logs/winston");
 class Room {
     constructor() {
         this.forward = new Map();
-        this.clients = new Map();
+        this.clients = new Set();
     }
 
     // TODO 로그 추가
@@ -27,3 +27,9 @@ class Room {
         }
     }
 }
+
+function NewRoom() {
+    return new Room();
+}
+
+module.exports = { NewRoom };
