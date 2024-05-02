@@ -4,9 +4,11 @@
 ## tech stack
 : Javascript, ws, winston(logging)
 
-## sample API
+## sample websocket on
 ```
-[send]
+[connection]
+[message]
+[close]
 ```
 
 ## Getting Started
