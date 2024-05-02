@@ -6,7 +6,6 @@ class Room {
         this.clients = new Set();
     }
 
-    // TODO 로그 추가
     join(client) {
         SocketLogger.info("new client");
 

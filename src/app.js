@@ -2,18 +2,6 @@ const http = require("http");
 const WebSocket = require("ws");
 const { SocketLogger} = require("../libs/logs/winston");
 const { NewRoom } = require("./types/Room");
-// const express = require("express");
-// const cors = require("cors");
-
-// const app = express();
-
-// app.use(
-//     cors({
-//         origin:"*"
-//     }),
-// );
-// app.use(express.json());
-// app.use(express.urlencoded({ extended:false }));
 
 const server = http.createServer();
 const wss = new WebSocket.Server({ server });
@@ -40,12 +28,13 @@ wss.on("connection", (ws, req) => {
     ws.on("close", () => {
         // client 접속이 끊기면, client 제거
         room.leave(ws);
+
         console.log("close");
     })
 });
 
-
 const PORT = process.env.PORT || 8080;
+
 server.listen(PORT, () => {
     SocketLogger.info(`Server Started on port = ${PORT}`);
 })
